@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -186,4 +187,122 @@ body {
     align-items: center;
     justify-content: center;
     animation: specialFraming 1s ease-in-out;
+}
+.Special h2{
+    color: transparent;
+    background: linear-gradient(to right , #308c7e,#004d00);
+    -webkit-background-clip: text;
+}
+
+.info{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    max-width: 1000px;
+    margin: auto
+};
+
+.info .img{
+    flex-shrink: 0;
+}
+.info .img img{
+    height: 150%;
+    max-height: 450px;
+    width: auto;
+}
+.information{
+    max-width: 700px;
+    text-align: justify;
+    line-height: 1.6;
+}
+.information p{
+    margin: 0;
+    
+}
+
+
+@media (max-width: 600px) {
+    .navbar-nav {
+        text-align: center;
+        flex-direction: row;
+    }
+    
+    .navbar-nav .nav-item {
+        margin-bottom: 1vh;
+        margin-right: 0;
+    }
+
+    .navbar-collapse {
+        background: white;
+        padding: 1vh;
+        box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.1);
+    }
+
+    .contact {
+        flex-direction: row;
+        padding: 1vh;
+        align-items: center;
+        display: none;
+    }
+
+    .contact a {
+        margin: 0.5vh 0;
+    }
+
+    .media {
+        margin: 0.5vh;
+        font-size: 1.2vw;
+        width: 4vw;
+        height: 4vw;
+    }
+
+    .sticky-bar {
+        flex-direction: row;
+        padding: 1vh;
+    }
+
+    .menu {
+        width: 300vh;
+    }
+
+    .navbar-brand img {
+        width: 60vw;
+        height: 10vh;
+    }
+
+    .navbar-toggler {
+        margin-left: 0;
+    }
+
+    .navbar-collapse {
+        border: 1px solid black;
+        border-radius: 2vh;
+    }
+
+    .certify {
+        padding: 2vh;
+        font-size: 1.6vh;
+    }
+
+    .icon a img {
+        display: none;
+    }
+
+    .info {
+        display: inline-block;
+        width: 100%;
+        padding: 2vh;
+        text-align: center;
+    }
+
+    .info .img img{
+        width: 60%;
+        height: auto;
+        margin-bottom: 2vh;
+    }
+
+    .info p {
+        font-size: 2vh;
+        line-height: 3vh;
+    }
 }
