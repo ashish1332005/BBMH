@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family:lato;
+    
 }
 
 .contact {
@@ -40,8 +41,7 @@ body {
 .media {
     margin: 0 0.625vh;
     font-size: 1.25rem;
-    color: white;
-    background-color: black;
+
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
@@ -75,20 +75,18 @@ body {
     left: 0;
     z-index: 1000;
     background: white;
-    box-shadow: 0 0.25vh 0.625vh rgba(0, 0, 0, 0.1);
     display: flex;
     align-items: center;
     padding: 1.25vh 2.5vh;
-    transition: box-shadow 0.3s ease;
+    box-shadow : 5vh solid #333;
+
 }
-.sticky-bar:hover {
-    box-shadow: 0 0.5vh 1.25vh rgba(0, 0, 0, 0.2);
-}
+
 
 .icon a img {
     height: 8vh;
     width: auto;
-    margin-left: 8vh;
+    margin-left: 15vh;
     float: right;
 }
 
@@ -101,7 +99,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 .navbar:hover {
     background-color: #669933;
@@ -113,62 +111,84 @@ body {
     justify-content: center;
 }
 .navbar-nav .nav-item {
-    margin: 0.2vh 1vh;
+    margin: 0.3vh 1vh;
 }
 
-/* .navbar-nav .nav-item {
-    margin-right: 1.5vw;
-} */
-
 .navbar-nav .nav-link {
-    color: black !important;
+    color: rgb(11, 11, 11) !important;
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s, transform 0.3s;
-    margin: 0 4vh auto 4vh;
+    transition: color 0.2s, transform 0.2s;
+    margin: 0 2vh auto 2vh;
     white-space: nowrap;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #004d00 !important;
-    transform: scale(1.1);
+    color:rgba(22, 24, 24, 0.87) !important;
+    transform: scale(1.07);
+    background-color:rgba(199, 206, 206, 0.37);
+    border-radius: 2vh;
+    
 }
 
-.dropdown-menu {
-    background-color: black;
-    border: none;
-    display: block;
-    box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.1);
+.navbar-nav .dropdown-toggle::after {
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-left: 0.3em solid transparent;
+    vertical-align: 0.1em;
+    margin-left: 8px;
+    float: right;
+    transition: transform 0.2s ease-in-out;
 }
-.dropdown-menu:hover{
-    display: block;
+
+/* Rotate arrow when dropdown is active */
+.navbar-nav .dropdown.show .dropdown-toggle::after {
+    transform: rotate(180deg);
+}
+
+
+.dropdown-menu {
+ 
+    background:rgba(255, 255, 255, 0.92);
+    border: none;
+    color: black;
+    box-shadow: 0 0.4vh 0.6vh rgba(0, 0, 0, 0.1);
 }
 
 .dropdown-menu .dropdown-item {
-    color: #333;
+    color:rgb(13, 11, 11);
     padding: 1vh 1.5vw;
     transition: background 0.3s, transform 0.2s;
 }
 
 .dropdown-menu .dropdown-item:hover {
-    background-color: yellowgreen;
+    background-color: rgb(105, 174, 177);
     color: black;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
-.navbar-toggler {
-    border: none;
-    background-color: yellowgreen;
-    float: right;
-    margin-left: 30vw;
+
+
+.certify {
+    background-color:rgba(233, 236, 239, 0.09);
+    padding: 5vh 2vw;
+    text-align: center;
+    font-size: 1.8vh;
+    color: #555;
+    border-radius: 0.8vw;
+    margin-top: 2vh;
+    position: sticky;
 }
 
-.navbar-toggler-icon {
-    filter: invert(1);
-    float: right;
-}
+.menu{
+    width: 100%;
 
+  padding-right:0px;
+  left: 0px;
+
+ 
+}
 
 /* Hamburger Menu Styles */
 .hamburger {
@@ -199,10 +219,16 @@ float: right;
     .icon a img {
         display: none;
     }
+  
+
     .navbar-collapse{
-        float: left;
+ float: left;
+    
+     
         text-align: left;
         text-decoration:#333;
+       
+    
     }
     .sticky-bar{
         height: auto;
@@ -302,9 +328,13 @@ float: right;
     }
 
     .navbar-toggler {
-        margin-left: 0; 
+        margin-left: 0;
+     
+     
     }
     .navbar-collapse{
+    
+     
         border-radius: 2vh;
         background-color:transparent;
         text-align: left;
@@ -324,36 +354,11 @@ float: right;
     
 }
 
-.certify {
-    background-color: #e9ecef;
-    padding: 5vh 2vw;
-    text-align: center;
-    font-size: 1.8vh;
-    color: #555;
-    border-radius: 0.8vw;
-    margin-top: 2vh;
-}
 
-@media (max-width: 600px) {
 
-    .navbar-brand img {
-        width: 60vw;
-        height: 10vh;
-    }
 
-    .navbar-toggler {
-        margin-left: 0;
-    }
-    .navbar-collapse{
-        border: 1px solid black;
-        border-radius: 2vh;
-    } */
 
-    .certify {
-        padding: 2vh;
-        font-size: 1.6vh;
-    }
-}
+
 
 
 @keyframes captionEntrance {
